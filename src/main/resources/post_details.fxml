@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.PostDetailsController"
+      style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25;">
+
+    <Label text="📄 Détails" style="-fx-font-size: 22px; -fx-font-weight: 900; -fx-text-fill: #3498DB;"/>
+
+    <GridPane hgap="15" vgap="10">
+        <Label text="Auteur:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblNom" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Rôle:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblRole" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Catégorie:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblCategorie" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label text="Date:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblDateCreation" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Label text="Statut:" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblStatut" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Label text="Contenu:" GridPane.rowIndex="5" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <TextArea fx:id="txtContenu" GridPane.rowIndex="5" GridPane.columnIndex="1" prefRowCount="8" prefWidth="400"/>
+    </GridPane>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Button fx:id="btnFermer" text="Fermer" onAction="#handleFermer" prefWidth="100"/>
+    </HBox>
+</VBox>
